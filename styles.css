@@ -1,4 +1,5 @@
 #game-canvas {
     border: 1px solid black;
     /*margin: 0;*/
+    background-image: url("./images/pngwing.com.png");
 }
