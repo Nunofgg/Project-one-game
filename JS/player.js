@@ -1,29 +1,29 @@
-class player{
+console.log("working");
+class Player {
     constructor(){
-        this.x = 487;
-        this.y = 600;
         this.width = 50;
         this.height = 50;
+        this.x = (gameCanvas.clientWidth / 2) - (this.width / 2);
+        this.y = 550;
     }
     draw(){
         //const image = new Image();
         //image.src = "";
         //context.drawImage(image, this.x, this.y, this.width, this.height);
-        context.fillStyle = "orange";
-        context.fillRect(this.x, this.y, this.width, this.height);
+        gameContext.fillStyle = "orange";
+        gameContext.fillRect(this.x, this.y, this.width, this.height);
     }
 
     movePlayer(key) {
-        context.clearRect(this.x, this.y, this.width, this.height);
+        gameContext.clearRect(this.x, this.y, this.width, this.height);
         switch (key) {
           case "ArrowLeft":
-            if (this.x > this.width) {
+            if (this.x > 8) {
               this.x -= 10;
             }
-    
             break;
           case "ArrowRight":
-            if (this.x < canvas.clientWidth - this.width) {
+            if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
               this.x += 10;
             }
             break;

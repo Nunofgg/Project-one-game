@@ -1,5 +1,27 @@
-#game-canvas {
+#gameCover {
+    width: 1024px;
+    height: 650px;
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameIntro {
+    display: flex;
+    justify-content: center;
+}
+
+#gameCanvas {
     border: 1px solid black;
     /*margin: 0;*/
-    background-image: url("./images/pngwing.com.png");
+    background-image: url("./images/concrete-background.png");
+}
+
+#gameBoard {
+    text-align: center; 
+    margin-top: 50px;
 }
