@@ -13,7 +13,7 @@ document.getElementById("startButton1P").onclick = () => {
   clearInterval(interval);
   startGame1P();
   updateTimer();
-  setTimeout(endGame, 30000);
+  setTimeout(endGame, 90000);
 };
 
 document.getElementById("startButton2P").onclick = () => {
@@ -23,13 +23,13 @@ document.getElementById("startButton2P").onclick = () => {
   clearInterval(interval);
   startGame2P();
   updateTimer();
-  setTimeout(endGame, 30000);
+  setTimeout(endGame, 90000);
 };
 
 
 
 function updateTimer(){
-    let seconds = 30;
+    let seconds = 90;
     document.getElementById("timer").innerText = seconds--;
     interval = setInterval(function() {
     document.getElementById("timer").innerText = seconds--;
@@ -113,6 +113,54 @@ function drawComponents() {
     );
 
     currentGame.components.push(newComponentJS);
+  }
+
+  currentGame.components.forEach((component, index) => {
+    component.y += component.speed;
+    component.draw();
+
+    if (
+      currentGame.player1.bottom() === component.bottom() &&
+      currentGame.player1.left() <= component.middleX() &&
+      currentGame.player1.right() >= component.middleX()
+    ) {
+      currentGame.score += component.score;
+      document.getElementById("score").innerText = currentGame.score;
+      currentGame.components.splice(index, 1);
+    }
+    else if (currentGame.player2.bottom !== undefined && (
+      currentGame.player2.bottom() === component.bottom() &&
+      currentGame.player2.left() <= component.middleX() &&
+      currentGame.player2.right() >= component.middleX()
+    )) {
+      currentGame.score += component.score;
+      document.getElementById("score").innerText = currentGame.score;
+      currentGame.components.splice(index, 1);
+    } 
+    else if (component.top() > gameCanvas.clientHeight) {
+      currentGame.score -= 1;
+      document.getElementById("score").innerText = currentGame.score;
+      currentGame.components.splice(index, 1);
+    }
+  });
+}
+
+function drawCoffee() {
+  if (currentGame.componentsFrequency % 200 === 0) {
+    const randomComponentX = Math.floor(Math.random() * 999);
+    const randomComponentY = 0;
+    const randomComponentWidth = 25;
+    const randomComponentHeight = 25;
+
+    const newComponentHTML = new Components(
+      randomComponentX,
+      randomComponentY,
+      randomComponentWidth,
+      randomComponentHeight,
+      0.5
+    );
+
+    currentGame.components.push(newComponentHTML);
   }
 
   currentGame.components.forEach((component, index) => {
