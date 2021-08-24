@@ -16,17 +16,32 @@ class Player1 {
 
     movePlayer(key) {
         gameContext.clearRect(this.x, this.y, this.width, this.height);
-        switch (key) {
-          case "ArrowLeft":
-            if (this.x > 8) {
-              this.x -= 10;
-            }
-            break;
-          case "ArrowRight":
-            if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
-              this.x += 10;
-            }
-            break;
+        if (keys === true) {
+          switch (key) {
+            case "ArrowLeft":
+              if (this.x > 8) {
+                this.x -= 10;
+              }
+              break;
+            case "ArrowRight":
+              if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
+                this.x += 10;
+              }
+              break;
+          }
+        } else if (keys === false) {
+          switch (key) {
+            case "ArrowRight":
+              if (this.x > 8) {
+                this.x -= 10;
+              }
+              break;
+            case "ArrowLeft":
+              if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
+                this.x += 10;
+              }
+              break;
+          }
         }
       }
 

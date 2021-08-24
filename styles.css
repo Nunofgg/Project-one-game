@@ -16,10 +16,20 @@
 
 #gameCanvas {
     border: 1px solid black;
-    /*margin: 0;*/
     background-image: url("./images/concrete-background.png");
 }
 
 #gameBoard {
     text-align: center; 
 }
+
+/*#matrixCover {
+    width: 1024px;
+    height: 650px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/

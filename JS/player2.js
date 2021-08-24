@@ -16,18 +16,33 @@ class Player2 {
 
     movePlayer(key) {
         gameContext.clearRect(this.x, this.y, this.width, this.height);
-        switch (key) {
-          case "a":
-            if (this.x > 8) {
-              this.x -= 10;
+        if (keys === true) {
+            switch (key) {
+              case "a":
+                if (this.x > 8) {
+                  this.x -= 10;
+                }
+                break;
+              case "d":
+                if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
+                  this.x += 10;
+                }
+                break;
             }
-            break;
-          case "d":
-            if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
-              this.x += 10;
+          } else if (keys === false) {
+            switch (key) {
+              case "d":
+                if (this.x > 8) {
+                  this.x -= 10;
+                }
+                break;
+              case "a":
+                if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
+                  this.x += 10;
+                }
+                break;
             }
-            break;
-        }
+          }
       }
 
     top(){
