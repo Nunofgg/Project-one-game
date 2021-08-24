@@ -7,6 +7,7 @@ let level = 1;
 let keys = true;
 
 document.getElementById("gameBoard").style.display = "none";
+// document.getElementById("matrix").style.display = "none";
 
 document.getElementById("startButton1P").onclick = () => {
   document.getElementById("gameBoard").style.display = "block";
