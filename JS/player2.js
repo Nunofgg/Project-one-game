@@ -1,5 +1,5 @@
 console.log("working");
-class Player1 {
+class Player2 {
     constructor(x){
         this.width = 50;
         this.height = 50;
@@ -10,19 +10,19 @@ class Player1 {
         //const image = new Image();
         //image.src = "";
         //context.drawImage(image, this.x, this.y, this.width, this.height);
-        gameContext.fillStyle = "green";
+        gameContext.fillStyle = "blue";
         gameContext.fillRect(this.x, this.y, this.width, this.height);
     }
 
     movePlayer(key) {
         gameContext.clearRect(this.x, this.y, this.width, this.height);
         switch (key) {
-          case "ArrowLeft":
+          case "a":
             if (this.x > 8) {
               this.x -= 10;
             }
             break;
-          case "ArrowRight":
+          case "d":
             if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
               this.x += 10;
             }
