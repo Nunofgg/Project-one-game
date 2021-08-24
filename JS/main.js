@@ -5,6 +5,7 @@ const gameContext = gameCanvas.getContext("2d");
 let interval;
 
 document.getElementById("gameBoard").style.display = "none";
+document.getElementById("matrix").style.display = "none";
 
 document.getElementById("startButton1P").onclick = () => {
   document.getElementById("gameBoard").style.display = "block";
@@ -114,6 +115,7 @@ function drawComponents() {
 
     currentGame.components.push(newComponentJS);
   }
+
 
   currentGame.components.forEach((component, index) => {
     component.y += component.speed;
