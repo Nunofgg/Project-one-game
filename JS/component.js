@@ -1,11 +1,13 @@
 console.log("working");
 class Components {
-    constructor(x, y, width, height, score, /*source*/) {
+    constructor(x, y, width, height, score, colour, speed, /*source*/) {
       this.x = x;
       this.y = y;
       this.width = width;
       this.height = height;
       this.score = score;
+      this.colour = colour;
+      this.speed = speed;
      // this.source = source;
     }
   
@@ -13,7 +15,7 @@ class Components {
        //const image = new Image();
        //image.src = this.source;
        //context.drawImage(image, this.x, this.y, this.width, this.height);
-      gameContext.fillStyle = "green";
+      gameContext.fillStyle = this.colour;
       gameContext.fillRect(this.x, this.y, this.width, this.height);
     }
   
