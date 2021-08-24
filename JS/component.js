@@ -37,3 +37,8 @@ class Components {
         return this.x + (this.width / 2);
     }
   }
+
+
+class HTML extends Components {
+  constructor()
+}
