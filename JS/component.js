@@ -8,7 +8,6 @@ class Components {
     this.score = score;
     this.source = source;
     this.speed = speed;
-    this.showFirstImage = true;
   }
 
   draw() {
@@ -61,7 +60,7 @@ class Components {
 function drawComponents() {
   currentGame.componentsFrequency++;
   if (currentGame.componentsFrequency % 200 === 0) {
-    const randomComponentX = Math.floor(Math.random() * 999);
+    const randomComponentX = Math.floor(Math.random() * 974);
     const randomComponentY = 0;
     const randomComponentWidth = 50;
     const randomComponentHeight = 70;
