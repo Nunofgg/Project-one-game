@@ -5,13 +5,14 @@ class Player2 {
         this.height = 50;
         this.x = x;
         this.y = 480;
+        this.colour = "black"
     }
 
     draw(){
       const image = new Image();
       image.src = "images/player-Nuno.png";
       gameContext.drawImage(image, this.x - 135, 338, 350, 334);
-      gameContext.fillStyle = "black";
+      gameContext.fillStyle = this.colour;
       gameContext.fillRect(this.x, this.y, this.width, this.height);
   }
 

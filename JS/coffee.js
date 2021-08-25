@@ -12,7 +12,7 @@ console.log("working");
         randomComponentY,
         randomComponentWidth,
         randomComponentHeight,
-        ["images/coffee-icon.png", "images/coffee-icon2.1.png"],
+        ["images/coffee-icon2.1.png", "images/coffee-icon2.2.png"],
         0.5
       );
   
@@ -28,6 +28,8 @@ console.log("working");
         currentGame.player1.left() <= coffee.middleX() &&
         currentGame.player1.right() >= coffee.middleX()
       ) {
+        currentGame.player1.colour = "white";
+        setTimeout(function(){ currentGame.player1.colour = "black"; }, 100);
         level = 2;
         keys = true;
         currentGame.coffee.splice(index, 1);
@@ -37,6 +39,8 @@ console.log("working");
         currentGame.player2.left() <= coffee.middleX() &&
         currentGame.player2.right() >= coffee.middleX()
       ) {
+        currentGame.player1.colour = "white";
+        setTimeout(function(){ currentGame.player2.colour = "black"; }, 100);
         level = 2;
         keys = true;
         currentGame.coffee.splice(index, 1);

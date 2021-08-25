@@ -12,7 +12,7 @@ console.log("working");
         randomComponentY,
         randomComponentWidth,
         randomComponentHeight,
-        ["images/Beer-icon.png", "images/Beer-icon2.1.png"],
+        ["images/Beer-icon2.1.png", "images/Beer-icon2.2.png"],
         0.5
       );
   
@@ -28,6 +28,8 @@ console.log("working");
         currentGame.player1.left() <= beer.middleX() &&
         currentGame.player1.right() >= beer.middleX()
       ) {
+        currentGame.player1.colour = "white";
+        setTimeout(function(){ currentGame.player1.colour = "black"; }, 100);
         level = 1;
         keys = false;
         currentGame.beer.splice(index, 1);
@@ -37,6 +39,8 @@ console.log("working");
         currentGame.player2.left() <= beer.middleX() &&
         currentGame.player2.right() >= beer.middleX()
       ) {
+        currentGame.player1.colour = "white";
+        setTimeout(function(){ currentGame.player2.colour = "black"; }, 100);
         level = 1;
         keys = false;
         currentGame.beer.splice(index, 1);

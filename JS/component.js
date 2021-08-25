@@ -126,6 +126,8 @@ function drawComponents() {
       currentGame.player1.left() <= component.middleX() &&
       currentGame.player1.right() >= component.middleX()
     ) {
+      currentGame.player1.colour = "white";
+      setTimeout(function(){ currentGame.player1.colour = "black"; }, 100);
       currentGame.score += component.score;
       document.getElementById("score").innerText = currentGame.score;
       currentGame.components.splice(index, 1);
@@ -135,6 +137,8 @@ function drawComponents() {
       currentGame.player2.left() <= component.middleX() &&
       currentGame.player2.right() >= component.middleX()
     ) {
+      currentGame.player1.colour = "white";
+      setTimeout(function(){ currentGame.player2.colour = "black"; }, 100);
       currentGame.score += component.score;
       document.getElementById("score").innerText = currentGame.score;
       currentGame.components.splice(index, 1);
