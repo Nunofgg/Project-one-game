@@ -72,7 +72,7 @@ function drawComponents() {
       randomComponentWidth,
       randomComponentHeight,
       1,
-      ["images/html-icon2.png", "images/html-icon2.png"],
+      ["images/html-icon2.png", "images/html-icon2.1.png"],
       0.5
     );
 
@@ -110,7 +110,7 @@ function drawComponents() {
       randomComponentWidth,
       randomComponentHeight,
       3,
-      ["images/js-icon2.png", "images/js-icon2.png"],
+      ["images/js-icon2.png", "images/js-icon2.1.png"],
       2.5
     );
 
