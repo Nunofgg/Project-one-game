@@ -1,7 +1,7 @@
 console.log("working");
 const gameCanvas = document.getElementById("gameCanvas");
 const gameContext = gameCanvas.getContext("2d");
-
+let frames = 0;
 let interval;
 let level = 1;
 let keys = true;
@@ -64,6 +64,7 @@ function startGame2P() {
 }
 
 function updateCanvas1P() {
+  frames++
   gameContext.clearRect(0, 0, gameCanvas.clientWidth, gameCanvas.clientHeight);
   currentGame.player1.draw();
   currentGame.teacher1.draw();
