@@ -1,18 +1,19 @@
 console.log("working");
 class Player2 {
     constructor(x){
-        this.width = 50;
+        this.width = 80;
         this.height = 50;
         this.x = x;
-        this.y = 550;
+        this.y = 480;
     }
+
     draw(){
-        //const image = new Image();
-        //image.src = "";
-        //context.drawImage(image, this.x, this.y, this.width, this.height);
-        gameContext.fillStyle = "blue";
-        gameContext.fillRect(this.x, this.y, this.width, this.height);
-    }
+      const image = new Image();
+      image.src = "images/player-Nuno.png";
+      gameContext.drawImage(image, this.x - 135, 338, 350, 334);
+      gameContext.fillStyle = "black";
+      gameContext.fillRect(this.x, this.y, this.width, this.height);
+  }
 
     movePlayer(key) {
         gameContext.clearRect(this.x, this.y, this.width, this.height);

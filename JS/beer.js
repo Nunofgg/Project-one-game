@@ -4,15 +4,15 @@ console.log("working");
     if (currentGame.beer.length === 0 && document.getElementById("timer").innerText === "60") {
       const randomComponentX = Math.floor(Math.random() * 999);
       const randomComponentY = 0;
-      const randomComponentWidth = 25;
-      const randomComponentHeight = 25;
+      const randomComponentWidth = 60;
+      const randomComponentHeight = 60;
   
       const newBeer = new Extra(
         randomComponentX,
         randomComponentY,
         randomComponentWidth,
         randomComponentHeight,
-        "purple",
+        ["images/Beer-icon.png"],
         0.5
       );
   

@@ -1,17 +1,14 @@
 console.log("working");
 
 class Extra extends Components {
-    constructor(x, y, width, height, colour, speed /*source*/) {
-        super(x, y, width, height, null, colour, speed);
-     // this.source = source;
+    constructor(x, y, width, height, source, speed) {
+        super(x, y, width, height, null, source, speed);
     }
   
     draw() {
-       //const image = new Image();
-       //image.src = this.source;
-       //context.drawImage(image, this.x, this.y, this.width, this.height);
-      gameContext.fillStyle = this.colour;
-      gameContext.fillRect(this.x, this.y, this.width, this.height);
+      const image = new Image();
+      image.src = this.source;
+      gameContext.drawImage(image, this.x, this.y, this.width, this.height);
     }
   
     top() {

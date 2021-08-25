@@ -5,6 +5,7 @@ const gameContext = gameCanvas.getContext("2d");
 let interval;
 let level = 1;
 let keys = true;
+let player1 = true;
 
 document.getElementById("gameBoard").style.display = "none";
 // document.getElementById("matrix").style.display = "none";
@@ -51,6 +52,7 @@ function startGame1P() {
 
 function startGame2P() {
   currentGame = new Game();
+  player1 = false;
   currentGame.player1 = new Player1(743);
   currentGame.player2 = new Player2(231);
   currentGame.player1.draw();

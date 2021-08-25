@@ -8,7 +8,7 @@ class Teacher1 {
     }
     draw(){
         //const image = new Image();
-        //image.src = "";
+        //image.src = "images/miguel.png";
         //context.drawImage(image, this.x, this.y, this.width, this.height);
         gameContext.fillStyle = "white";
         gameContext.fillRect(this.x, this.y, this.width, this.height);
