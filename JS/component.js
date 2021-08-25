@@ -9,13 +9,15 @@ class Components {
       this.source = source;
       this.speed = speed;
     }
-  
+    
+
     draw() {
       const image = new Image();
-      image.src = this.source;
+      image = this.source;
+
       gameContext.drawImage(image, this.x, this.y, this.width, this.height);
     }
-  
+    
     top() {
       return this.y;
     }
@@ -51,7 +53,7 @@ class Components {
         randomComponentWidth,
         randomComponentHeight,
         1,
-        "images/html-icon2.png",
+        ["images/html-icon2.png", "images/html-icon.png"],
         0.5
       );
   
@@ -70,7 +72,7 @@ class Components {
         randomComponentWidth,
         randomComponentHeight,
         2,
-        "images/css-icon2.png",
+        ["images/css-icon2.png", "images/css-icon2.2.png"],
         1
       );
   
@@ -89,7 +91,7 @@ class Components {
         randomComponentWidth,
         randomComponentHeight,
         3,
-        ["images/js-icon2.png"],
+        ["images/js-icon2.png", "images/js-icon.png"],
         2.5
       );
   
