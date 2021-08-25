@@ -12,7 +12,7 @@ console.log("working");
         randomComponentY,
         randomComponentWidth,
         randomComponentHeight,
-        ["images/coffee-icon.png", "images/coffee-icon2.png"],
+        ["images/coffee-icon.png", "images/coffee-icon2.1.png"],
         0.5
       );
   
