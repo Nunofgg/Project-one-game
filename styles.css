@@ -40,6 +40,28 @@ body {
     text-align: center; 
 }
 
+#timerDiv {
+    position: absolute;
+    top: 115px;
+    right: 475px;  
+    color: #48fb47;
+}
+
+#scoreDiv {
+    position: absolute;
+    top: 115px;
+    right: 715px;    
+    color: #48fb47;
+}
+
+#speachDiv {
+    position: absolute;
+    top: 280px;
+    right: 575px;    
+    color: #48fb47;
+}
+
+
 #gameCanvas {
     border: 1px solid black;
     background-image: url("./images/concrete-background.png");

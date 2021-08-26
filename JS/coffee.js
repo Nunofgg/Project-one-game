@@ -28,7 +28,7 @@ console.log("working");
         currentGame.player1.left() <= coffee.middleX() &&
         currentGame.player1.right() >= coffee.middleX()
       ) {
-        teacherTalk();
+        teacherTalk(4);
         currentGame.player1.colour = "white";
         setTimeout(function(){ currentGame.player1.colour = "black"; }, 100);
         level = 2;
@@ -40,6 +40,7 @@ console.log("working");
         currentGame.player2.left() <= coffee.middleX() &&
         currentGame.player2.right() >= coffee.middleX()
       ) {
+        teacherTalk(4);
         currentGame.player1.colour = "white";
         setTimeout(function(){ currentGame.player2.colour = "black"; }, 100);
         level = 2;

@@ -42,22 +42,30 @@ let currentGame;
 
 function startGame1P() {
   currentGame = new Game();
+  bensoundElevatorBossaNova.play();
   currentGame.player1 = new Player1(487);
   currentGame.player1.draw();
   currentGame.teacher1 = new Teacher1();
   currentGame.teacher1.draw();
+  setTimeout(function(){teacherTalk(1)}, 1000);
+  setTimeout(function(){teacherTalk(2)}, 2200);
+  setTimeout(function(){teacherTalk(3)}, 3300);
   cancelAnimationFrame(currentGame.animationId);
   updateCanvas1P();
 }
 
 function startGame2P() {
   currentGame = new Game();
+  bensoundElevatorBossaNova.play();
   player1 = false;
   currentGame.player1 = new Player1(743);
   currentGame.player2 = new Player2(231);
   currentGame.player1.draw();
   currentGame.player2.draw();
   currentGame.teacher1 = new Teacher1();
+  setTimeout(function(){teacherTalk(1)}, 1000);
+  setTimeout(function(){teacherTalk(2)}, 2200);
+  setTimeout(function(){teacherTalk(3)}, 3300);
   currentGame.teacher1.draw();
   cancelAnimationFrame(currentGame.animationId);
   updateCanvas2P();
@@ -67,10 +75,11 @@ function updateCanvas1P() {
   frames++
   gameContext.clearRect(0, 0, gameCanvas.clientWidth, gameCanvas.clientHeight);
   currentGame.player1.draw();
-  currentGame.teacher1.draw();
   drawComponents();
   drawCoffee();
   drawBeer();
+  teacherAdvice()
+  currentGame.teacher1.draw();
   // drawMatrix();
   currentGame.animationId = requestAnimationFrame(updateCanvas1P);
   //checkGameOver();
@@ -80,10 +89,11 @@ function updateCanvas2P() {
   gameContext.clearRect(0, 0, gameCanvas.clientWidth, gameCanvas.clientHeight);
   currentGame.player1.draw();
   currentGame.player2.draw();
-  currentGame.teacher1.draw();
   drawComponents();
   drawCoffee();
   drawBeer();
+  teacherAdvice()
+  currentGame.teacher1.draw();
   // drawMatrix();
   currentGame.animationId = requestAnimationFrame(updateCanvas2P);
   //checkGameOver();
@@ -110,6 +120,7 @@ document.addEventListener("keydown", (e) => {
 // }
 
 function endGame() {
+  bensoundElevatorBossaNova.pause();
   document.getElementById("score").innerText = 0;
   document.getElementById("gameBoard").style.display = "none";
   cancelAnimationFrame(currentGame.animationId);
