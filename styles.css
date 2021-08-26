@@ -1,12 +1,12 @@
 #gameCover {
     width: 1024px;
     height: 650px;
-    background-color: white;
+    background-color: #adadad;
     border: 1px solid black;
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #gameIntro {
@@ -21,6 +21,14 @@
 
 #gameBoard {
     text-align: center; 
+}
+
+#startButton {
+    color: #a5a5a5, 128, 128;
+    padding: 40px 80px;
+    border: 8px solid #175676;
+    border-radius: 20px;
+    background-color: #CCE6F4;
 }
 
 /*#matrixCover {
