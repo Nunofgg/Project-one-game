@@ -1,12 +1,6 @@
-#gameCover {
-    width: 1024px;
-    height: 650px;
-    background-color: #adadad;
-    border: 1px solid black;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+body {
+    font-family: "Lucida Console", monospace;
+    background-color: black;
 }
 
 #gameIntro {
@@ -14,30 +8,104 @@
     justify-content: center;
 }
 
-#gameCanvas {
+#gameCover {
+    width: 1024px;
+    height: 650px;
+    background-image: url("./images/background-full.jpg");
     border: 1px solid black;
-    background-image: url("./images/concrete-background.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+}
+
+#title {
+    color: #00da00;
+}
+
+h1 {
+    font-size: 1.6em;
+    font-family: "Lucida Console", monospace;
+    margin-top: 100px;
+}
+
+h4 {
+    color: #00da00;
+    font-size: 0.8em;
+}
+
+#elementsInfo {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+#elementsInfo img {
+    width: 30px;
+}
+
+#elementsInfo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#keys {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+}
+
+.keys-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.start-button{
+    font-family: "Lucida Console", monospace;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #d3cabf;
+    box-shadow: -3px 3px #b6b6b6;
+}
+
+.play-keys {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+}
+
+.play-keys button {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    background-color: #d3cabf;
+    color: white;
+    box-shadow: -3px 3px #b6b6b6;
 }
 
 #gameBoard {
     text-align: center; 
 }
 
-#startButton {
-    color: #a5a5a5, 128, 128;
-    padding: 40px 80px;
-    border: 8px solid #175676;
-    border-radius: 20px;
-    background-color: #CCE6F4;
-}
-
-/*#matrixCover {
-    width: 1024px;
-    height: 650px;
-    background-color: white;
+#gameCanvas {
     border: 1px solid black;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
+    background-image: url("./images/background-full.jpg");
+    border-radius: 50px;
+}

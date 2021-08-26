@@ -13,7 +13,7 @@ class Teacher1 {
         this.teacherHeight = 180;
         this.teacherX = 417;
         this.teacherY = 90;
-        this.teacherImg = ["images/miguel1.png", "images/miguel-boca.png"];
+        this.teacherImg = "images/miguel1.png";
     }
     draw(){
         gameContext.fillStyle = "black";
@@ -21,18 +21,28 @@ class Teacher1 {
         const frame = new Image();
         frame.src = "images/old-pc.png";
         gameContext.drawImage(frame, this.imageX, this.imageY, this.imageWidth, this.imageHeight);
-
-       if(currentGame.player1.x < 500){
-            const teacher = new Image();
-            teacher.src = this.teacherImg[0];
-            gameContext.drawImage(teacher, this.teacherX, this.teacherY, this.teacherWidth, this.teacherHeight);
-        }
-
-        else{
-            const teacher = new Image();
-            teacher.src = this.teacherImg[1];
-            gameContext.drawImage(teacher, this.teacherX, this.teacherY, this.teacherWidth, this.teacherHeight);
-        }
+        const teacher = new Image();
+        teacher.src = this.teacherImg;
+        gameContext.drawImage(teacher, this.teacherX, this.teacherY, this.teacherWidth, this.teacherHeight);
     }
+
+    // teacherTalk () {
+    //     this.teacherImg = "images/miguel-boca.png";
+    //     setTimeout(function(){ this.teacherImg = "images/miguel1.png"; }, 100);
+    //     setTimeout(function(){ this.teacherImg = "images/miguel-boca.png"; }, 200);
+    //     setTimeout(function(){ this.teacherImg = "images/miguel1.png"; }, 300);
+    //     setTimeout(function(){ this.teacherImg = "images/miguel-boca.png"; }, 400);
+    //     setTimeout(function(){ this.teacherImg = "images/miguel1.png"; }, 500);
+    // }
 }
 
+function teacherTalk() {
+    currentGame.teacher1.teacherImg = "images/miguel-boca.png";
+    setTimeout(function(){ thicurrentGame.teacher1.teacherImg = "images/miguel1.png"; }, 100);
+    setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel-boca.png"; }, 300);
+    setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel1.png"; }, 500);
+    setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel-boca.png"; }, 700);
+    setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel1.png"; }, 900);
+    setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel-boca.png"; }, 1100);
+    setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel1.png"; }, 1300);
+}
