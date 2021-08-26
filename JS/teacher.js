@@ -11,11 +11,11 @@ class Teacher1 {
         this.imageY = 0;
     }
     draw(){
-        gameContext.fillStyle = "black";
-        gameContext.fillRect(this.rectX, this.rectY, this.rectWidth, this.rectHeight);
-        const image = new Image();
-        image.src = "images/old-pc.png";
-        gameContext.drawImage(image, this.imageX, this.imageY, this.imageWidth, this.imageHeight);
+        // gameContext.fillStyle = "black";
+        // gameContext.fillRect(this.rectX, this.rectY, this.rectWidth, this.rectHeight);
+        // const image = new Image();
+        // image.src = "images/old-pc.png";
+        // gameContext.drawImage(image, this.imageX, this.imageY, this.imageWidth, this.imageHeight);
             
     }
 }
