@@ -21,13 +21,18 @@ class Teacher1 {
         const frame = new Image();
         frame.src = "images/old-pc.png";
         gameContext.drawImage(frame, this.imageX, this.imageY, this.imageWidth, this.imageHeight);
-        const teacher = new Image();
-        teacher.src = this.teacherImg[0];
-        gameContext.drawImage(teacher, this.teacherX, this.teacherY, this.teacherWidth, this.teacherHeight);
-    }
 
-    teacherTalk () {
-        
+       if(currentGame.player1.x < 500){
+            const teacher = new Image();
+            teacher.src = this.teacherImg[0];
+            gameContext.drawImage(teacher, this.teacherX, this.teacherY, this.teacherWidth, this.teacherHeight);
+        }
+
+        else{
+            const teacher = new Image();
+            teacher.src = this.teacherImg[1];
+            gameContext.drawImage(teacher, this.teacherX, this.teacherY, this.teacherWidth, this.teacherHeight);
+        }
     }
 }
 
