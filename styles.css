@@ -1,12 +1,5 @@
-#gameCover {
-    width: 1024px;
-    height: 650px;
-    background-color: #adadad;
-    border: 1px solid black;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+body {
+    font-family: "Lucida Console", monospace;
 }
 
 #gameIntro {
@@ -14,22 +7,45 @@
     justify-content: center;
 }
 
-#gameCanvas {
-    border: 1px solid black;
+#gameCover {
+    width: 1024px;
+    height: 650px;
     background-image: url("./images/concrete-background.png");
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#title {
+    color: #48fb47;
+}
+
+.startButton {
+    font-family: "Lucida Console", monospace;
+    /*color: #a5a5a5, 128, 128;
+    padding: 40px 80px;
+    border: 4px solid #3a3a3a;
+    border-radius: 20px;
+    background-color: #CCE6F4*/
+}
+
+#keys {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #gameBoard {
     text-align: center; 
 }
 
-#startButton {
-    color: #a5a5a5, 128, 128;
-    padding: 40px 80px;
-    border: 8px solid #175676;
-    border-radius: 20px;
-    background-color: #CCE6F4;
+#gameCanvas {
+    border: 1px solid black;
+    background-image: url("./images/concrete-background.png");
 }
+
+
 
 /*#matrixCover {
     width: 1024px;

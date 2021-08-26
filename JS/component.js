@@ -125,6 +125,7 @@ function drawComponents() {
       currentGame.player1.left() <= component.middleX() &&
       currentGame.player1.right() >= component.middleX()
     ) {
+      teacherTalk();
       currentGame.player1.colour = "white";
       setTimeout(function(){ currentGame.player1.colour = "black"; }, 100);
       currentGame.score += component.score;
