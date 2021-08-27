@@ -28,6 +28,7 @@ console.log("working");
         currentGame.player1.left() <= beer.middleX() &&
         currentGame.player1.right() >= beer.middleX()
       ) {
+        popUp.play();
         teacherTalk(5);
         currentGame.player1.colour = "white";
         setTimeout(function(){ currentGame.player1.colour = "black"; }, 100);
@@ -40,6 +41,7 @@ console.log("working");
         currentGame.player2.left() <= beer.middleX() &&
         currentGame.player2.right() >= beer.middleX()
       ) {
+        popUp.play();
         teacherTalk(5);
         currentGame.player1.colour = "white";
         setTimeout(function(){ currentGame.player2.colour = "black"; }, 100);
