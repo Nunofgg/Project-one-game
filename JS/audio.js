@@ -1,6 +1,6 @@
 console.log("working");
 
-let bensoundElevatorBossaNova = new Audio(src="audios/BensoundElevatorBossaNova_bip_1.wav")
+let bensoundElevatorBossaNova = new Audio(src="audios/BensoundElevatorBossaNova_bip_2.wav")
 let coffeebreak = new Audio(src="audios/Coffeebreak_bip_1.wav")
 let dontforgettosave = new Audio(src="audios/Dontforgettosave_bip_1.wav")
 let googleit = new Audio(src="audios/Googleit_bip_1.wav")
