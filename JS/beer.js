@@ -1,7 +1,8 @@
 console.log("working");
 
   function drawBeer() {
-    if (currentGame.beer.length === 0 && document.getElementById("timer").innerText === "60") {
+    if (currentGame.beer.length === 0 && document.getElementById("timer").innerText === "45") {
+     for(let i = 0; i <= 30; i++){
       const randomComponentX = Math.floor(Math.random() * 964);
       const randomComponentY = 0;
       const randomComponentWidth = 60;
@@ -17,6 +18,7 @@ console.log("working");
       );
   
       currentGame.beer.push(newBeer);
+     }
     }
   
     currentGame.beer.forEach((beer, index) => {

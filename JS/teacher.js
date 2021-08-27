@@ -43,7 +43,7 @@ function teacherTalk(index) {
     speachesAudio[index].play();
     setTimeout(function(){ document.getElementById("speach").innerText = speachesText[0]; }, 1000);
     currentGame.teacher1.teacherImg = "images/miguel-boca.png";
-    setTimeout(function(){ thicurrentGame.teacher1.teacherImg = "images/miguel1.png"; }, 100);
+    setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel1.png"; }, 100);
     setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel-boca.png"; }, 200);
     setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel1.png"; }, 300);
     setTimeout(function(){ currentGame.teacher1.teacherImg = "images/miguel-boca.png"; }, 400);

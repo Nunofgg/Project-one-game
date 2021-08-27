@@ -51,21 +51,29 @@ h4 {
 #timerDiv {
     position: absolute;
     top: 115px;
-    right: 475px;  
+    margin-left: 600px;
     color: #48fb47;
+
 }
 
 #scoreDiv {
     position: absolute;
-    top: 115px;
-    right: 715px;    
+    top: 115px;   
     color: #48fb47;
+    margin-left: 350px;
+}
+
+#gameBoardDiv {
+    width: 1024px;
+    height: 650px;
+    margin: auto;
 }
 
 #speachDiv {
+    width: 1024px;
+    height: 650px;
     position: absolute;
-    top: 280px;
-    right: 575px;    
+    top: 280px;   
     color: #48fb47;
 }
 
