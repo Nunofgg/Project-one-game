@@ -47,9 +47,9 @@ function startGame1P() {
   currentGame.player1.draw();
   currentGame.teacher1 = new Teacher1();
   currentGame.teacher1.draw();
-  setTimeout(function(){teacherTalk(1)}, 1000);
-  setTimeout(function(){teacherTalk(2)}, 2200);
-  setTimeout(function(){teacherTalk(3)}, 3300);
+  setTimeout(function(){teacherTalk(1)}, 1500);
+  setTimeout(function(){teacherTalk(2)}, 3000);
+  setTimeout(function(){teacherTalk(3)}, 5500);
   cancelAnimationFrame(currentGame.animationId);
   updateCanvas1P();
 }
@@ -63,9 +63,9 @@ function startGame2P() {
   currentGame.player1.draw();
   currentGame.player2.draw();
   currentGame.teacher1 = new Teacher1();
-  setTimeout(function(){teacherTalk(1)}, 1000);
-  setTimeout(function(){teacherTalk(2)}, 2200);
-  setTimeout(function(){teacherTalk(3)}, 3300);
+  setTimeout(function(){teacherTalk(1)}, 1500);
+  setTimeout(function(){teacherTalk(2)}, 3000);
+  setTimeout(function(){teacherTalk(3)}, 5500);
   currentGame.teacher1.draw();
   cancelAnimationFrame(currentGame.animationId);
   updateCanvas2P();
