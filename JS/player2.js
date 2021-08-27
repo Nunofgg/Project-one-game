@@ -22,12 +22,12 @@ class Player2 {
             switch (key) {
               case "a":
                 if (this.x > 8) {
-                  this.x -= 10;
+                  this.x -= 10 * level;
                 }
                 break;
               case "d":
                 if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
-                  this.x += 10;
+                  this.x += 10 * level;
                 }
                 break;
             }

@@ -79,7 +79,7 @@ function drawComponents() {
   }
 
   if (currentGame.componentsFrequency % 550 === 0) {
-    const randomComponentX = Math.floor(Math.random() * 999);
+    const randomComponentX = Math.floor(Math.random() * 974);
     const randomComponentY = 0;
     const randomComponentWidth = 50;
     const randomComponentHeight = 70;
@@ -98,7 +98,7 @@ function drawComponents() {
   }
 
   if (currentGame.componentsFrequency % 950 === 0) {
-    const randomComponentX = Math.floor(Math.random() * 999);
+    const randomComponentX = Math.floor(Math.random() * 974);
     const randomComponentY = 0;
     const randomComponentWidth = 50;
     const randomComponentHeight = 70;
@@ -138,7 +138,7 @@ function drawComponents() {
       currentGame.player2.right() >= component.middleX()
     ) {
       popUp.play();
-      currentGame.player1.colour = "white";
+      currentGame.player2.colour = "white";
       setTimeout(function(){ currentGame.player2.colour = "black"; }, 100);
       currentGame.score += component.score;
       updateScore();

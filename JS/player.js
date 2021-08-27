@@ -26,12 +26,12 @@ class Player1 {
           switch (key) {
             case "ArrowLeft":
               if (this.x > 8) {
-                this.x -= 10;
+                this.x -= 10 * level;
               }
               break;
             case "ArrowRight":
               if (this.x < (gameCanvas.clientWidth - this.width) - 8) {
-                this.x += 10;
+                this.x += 10 * level;
               }
               break;
           }

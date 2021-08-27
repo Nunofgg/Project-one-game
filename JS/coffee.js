@@ -1,7 +1,7 @@
 console.log("working");
 
   function drawCoffee() {
-    if (currentGame.coffee.length === 0 && document.getElementById("timer").innerText === "85") {
+    if (currentGame.componentsFrequency % 1200 === 0) {
       const randomComponentX = Math.floor(Math.random() * 964);
       const randomComponentY = 0;
       const randomComponentWidth = 60;
@@ -17,6 +17,7 @@ console.log("working");
       );
   
       currentGame.coffee.push(newCoffee);
+      teacherTalk(4);
     }
   
     currentGame.coffee.forEach((coffee, index) => {
@@ -29,12 +30,14 @@ console.log("working");
         currentGame.player1.right() >= coffee.middleX()
       ) {
         popUp.play();
-        teacherTalk(4);
         currentGame.player1.colour = "white";
         setTimeout(function(){ currentGame.player1.colour = "black"; }, 100);
         level = 2;
         keys = true;
         currentGame.coffee.splice(index, 1);
+        setTimeout(() => {
+          level = 1;
+        }, 8000);
       } else if (
         currentGame.player2.bottom !== undefined &&
         currentGame.player2.bottom() === coffee.bottom() &&
@@ -42,12 +45,14 @@ console.log("working");
         currentGame.player2.right() >= coffee.middleX()
       ) {
         popUp.play();
-        teacherTalk(4);
-        currentGame.player1.colour = "white";
+        currentGame.player2.colour = "white";
         setTimeout(function(){ currentGame.player2.colour = "black"; }, 100);
         level = 2;
         keys = true;
         currentGame.coffee.splice(index, 1);
+        setTimeout(() => {
+          level = 1;
+        }, 8000);
       } else if (coffee.top() > gameCanvas.clientHeight) {
         currentGame.coffee.splice(index, 1);
       }
