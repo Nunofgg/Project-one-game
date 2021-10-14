@@ -7,9 +7,6 @@ class Teacher2 {
         this.y = gameCanvas.clientHeight / 4;
     }
     draw(){
-        //const image = new Image();
-        //image.src = "";
-        //context.drawImage(image, this.x, this.y, this.width, this.height);
         gameContext.fillStyle = "white";
         gameContext.fillRect(this.x, this.y, this.width, this.height);
     }

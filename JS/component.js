@@ -144,8 +144,6 @@ function drawComponents() {
       updateScore();
       currentGame.components.splice(index, 1);
     } else if (component.top() > gameCanvas.clientHeight) {
-      // currentGame.score -= 1;
-      // document.getElementById("score").innerText = currentGame.score;
       currentGame.components.splice(index, 1);
     }
   });

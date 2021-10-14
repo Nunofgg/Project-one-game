@@ -28,8 +28,6 @@ console.log("working");
         currentGame.player1.left() <= matrix.middleX() &&
         currentGame.player1.right() >= matrix.middleX()
       ) {
-        // document.getElementById("gameBoard").style.display = "none";
-        // document.getElementById("matrixCanvas").style.display = "block";
         currentGame.matrix.splice(index, 1);
       } else if (
         currentGame.player2.bottom !== undefined &&

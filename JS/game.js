@@ -8,7 +8,6 @@ class Game {
         this.components = [];
         this.coffee = [];
         this.beer = [];
-        // this.matrix = [];
         this.score = 0;
         this.componentsFrequency = 0;
         this.animationId = null;

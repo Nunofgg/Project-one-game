@@ -16,24 +16,10 @@ class Teacher1 {
         this.teacherImg = "images/miguel1.png";
     }
     draw(){
-        // gameContext.fillStyle = "black";
-        // gameContext.fillRect(this.rectX, this.rectY, this.rectWidth, this.rectHeight);
-        // const frame = new Image();
-        // frame.src = "images/old-pc.png";
-        // gameContext.drawImage(frame, this.imageX, this.imageY, this.imageWidth, this.imageHeight);
         const teacher = new Image();
         teacher.src = this.teacherImg;
         gameContext.drawImage(teacher, this.teacherX, this.teacherY, this.teacherWidth, this.teacherHeight);
     }
-
-    // teacherTalk () {
-    //     this.teacherImg = "images/miguel-boca.png";
-    //     setTimeout(function(){ this.teacherImg = "images/miguel1.png"; }, 100);
-    //     setTimeout(function(){ this.teacherImg = "images/miguel-boca.png"; }, 200);
-    //     setTimeout(function(){ this.teacherImg = "images/miguel1.png"; }, 300);
-    //     setTimeout(function(){ this.teacherImg = "images/miguel-boca.png"; }, 400);
-    //     setTimeout(function(){ this.teacherImg = "images/miguel1.png"; }, 500);
-    // }
 }
 
 function teacherTalk(index) {

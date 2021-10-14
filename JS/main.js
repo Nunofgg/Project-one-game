@@ -80,9 +80,7 @@ function updateCanvas1P() {
   drawBeer();
   teacherAdvice()
   currentGame.teacher1.draw();
-  // drawMatrix();
   currentGame.animationId = requestAnimationFrame(updateCanvas1P);
-  //checkGameOver();
 }
 
 function updateCanvas2P() {
@@ -94,9 +92,7 @@ function updateCanvas2P() {
   drawBeer();
   teacherAdvice()
   currentGame.teacher1.draw();
-  // drawMatrix();
   currentGame.animationId = requestAnimationFrame(updateCanvas2P);
-  //checkGameOver();
 }
 
 document.addEventListener("keydown", (e) => {
@@ -109,15 +105,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// function checkGameOver(){
-//     if(currentGame.score < 0){
-//         document.getElementById("score").innerText = 0;
-//         document.getElementById("gameBoard").style.display = "none";
-//         cancelAnimationFrame(currentGame.animationId);
-//         alert("Game Over");
-//         document.getElementById("gameIntro").style.display = "flex";
-//     }
-// }
 
 function endGame() {
   bensoundElevatorBossaNova.pause();
