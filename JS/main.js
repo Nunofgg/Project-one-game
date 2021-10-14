@@ -8,7 +8,6 @@ let keys = true;
 let player1 = true;
 
 document.getElementById("gameBoard").style.display = "none";
-// document.getElementById("matrix").style.display = "none";
 
 document.getElementById("startButton1P").onclick = () => {
   document.getElementById("gameBoard").style.display = "block";
